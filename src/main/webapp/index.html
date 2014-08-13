@@ -2,94 +2,84 @@
 
     <head>
 
-        <title> add SVG</title>
-
+        <title>Report Layout Designer</title>
         <link rel="stylesheet" type="text/css" href="CSS/styles.css">
 
     </head>
 
-<body>
+    <body>
 
-<div id="container" class="containerclass">
+        <div id="container" class="containerclass">
 
-<div id="header" class="headerclass">
+            <div id="header" class="headerclass">
 
-<div id="buttons">
+                <div id="buttons">
 
-<button id="bold" type="button" style="font:bold 14px Arial" onclick="bold()"> B </button>
+                    <button id="bold" type="button" style="font:bold 14px Arial" onclick="bold()"> B </button>
+                    <button id="italic" type="button" style="font:italic 14px Arial" onclick="italic()"> I </button>
+                    <button id="underline" type="button"  onclick="underline()"> <u> U </u> </button>
 
-<button id="italic" type="button" style="font:italic 14px Arial" onclick="italic()"> I </button>
+                </div>
 
-<button id="underline" type="button"  onclick="underline()"> <u> U </u> </button>
+                <p id="fontlabel"> Font Size </p>
 
-</div>
+                <div id="fontsize">
 
-<p id="fontlabel"> Font Size </p>
+                    <form id="font_form">
+                        <select id="font" onchange="setFont()">
 
-<div id="fontsize">
+                            <option value='12'> 12 </option>
+                            <option value='14'> 14 </option>
+                            <option value='16'>16</option>
+                            <option value='18'>18</option>
+                            <option value='20'> 20</option>
 
-<form id="font_form">
+                        </select>
+                    </form>
 
-<select id="font" onchange="setFont()">
+                </div>
 
-<option value='12'> 12 </option>
+                <form  id="browse" action="fileinsert.html" method="post">
 
-<option value='14'> 14 </option>
+                <input type="file" name="datasize" size="30">
 
-<option value='16'>16</option>
+                </form>
 
-<option value='18'>18</option>
+            </div>
 
-<option value='20'> 20</option>
-	
-</select>
+            <div id="right">
 
-</form>
+            </div>
 
-</div>
+            <div id="left">
 
-<form  id="browse" action="fileinsert.html" method="post">
+            </div>
 
-<input type="file" name="datasize" size="30">
+            <p id="row_label">No.of Rows</p>
+            <input type="number" id="rows">
 
-</form>
+            <p id="col_label">No.of Cols</p>
+            <input type="number" id="cols">
 
-</div>
-
-<div id="right">
-
-</div>
-
-<div id="left">
-
-</div>
-
-<p id="row_label">No.of Rows</p>
-<input type="number" id="rows">
-
-<p id="col_label">No.of Cols</p>
-<input type="number" id="cols">
-
-<button id="ok" onclick="Read()">OK</button>
+            <button id="ok" onclick="Read()">OK</button>
 
 
-<div id="middle">
-	
-<svg id="svg">
+            <div id="middle">
 
-<foreignObject x="10" y="10" overflow="visible" width="10000" height="10000">
+                <svg id="svg">
+
+                    <foreignObject x="10" y="10" overflow="visible" width="10000" height="10000">
+
+                    </foreignObject>
+                </svg>
+
+            </div>
 
 
-</foreignObject>
-</svg>
+            <script type="text/javascript" src="JQuery/jquery-1.11.1.min.js"></script>
 
-</div>
-
-
-<script type="text/javascript" src="JQuery/jquery-1.11.1.min.js"></script>
-
-<script type="text/javascript" src="Javascript/EditingFuntions.js"></script>
-
- 
-</body>
+            <script type="text/javascript" src="Javascript/EditingFuntions.js"></script>
+        
+        </div>
+    </body>
 </html>
